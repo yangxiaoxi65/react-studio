@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import bakeryData from "./assets/bakery-data.json";
-import BakeryItem from "./components/BakeryItem"; // 确保路径正确
+import BakeryItem from "./components/BakeryItem"; 
 
 // Make image URLs work
 bakeryData.forEach((item) => {
