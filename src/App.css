@@ -1,9 +1,115 @@
-/* Add styling for your page here */
-
-.App {
-
-}
-
-.BakeryItem {
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
   
-}
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Bakery Items */
+  .bakery-items {
+    width: 60%; /* Adjust the width as needed */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    grid-gap: 20px; /* Adjust the spacing between items */
+  }
+  
+  .bakery-item {
+    background-color: #fffcef;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .bakery-item img {
+    max-width: 100%;
+    border-radius: 5px; /* Optional: if images have rounded corners */
+  }
+  
+  .bakery-item h3, .bakery-item p {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Pricing and Add to Cart Button */
+  .bakery-item p {
+    margin-top: 8px;
+  }
+  
+  .bakery-item button {
+    background-color: #ff6347; /* Example button color, choose what you prefer */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bakery-item button:hover {
+    background-color: #e55330;
+  }
+  
+  /* Shopping Cart */
+  .cart {
+    width: 30%; /* Adjust the width as needed */
+    margin-left: 40px; /* Spacing between the items and cart */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .cart h2 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .App {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cart {
+      width: 80%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  
+    .bakery-items {
+      width: 100%;
+    }
+  }
+  
